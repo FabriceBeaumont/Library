@@ -1,0 +1,23 @@
+Citation key pattern == File name of the paper
+    
+    Article:    [year]_[auth]_[ConferenceNameAbbrev.]
+    Book:       [year]_[auth]_BOOK
+    Conference: [year]_[auth]_CONF
+    InBook:     [year]_[auth]_InBOOK
+    InCollection:   [year]_[auth]_CONF
+    InProceedings:  [year]_[auth]_CONF
+    MastersThesis:  [year]_[auth]_THESIS
+    PhdThesis:      [year]_[auth]_DISSERTATION
+    TechReport:     [year]_[auth]_TECH_REPORT
+
+Use the 'quality'-column to set, if inserted references are checked for correctness.
+
+SOURCE: https://www.youtube.com/watch?v=11qMBE_PSBw
+
+
+Research paper annotations - e.g. with OKULAR
+Text marker:
+- yellow: Simple importance
+- green: proof/reason/key argument
+- cyan: special definition          (defined in almost no previous papers)
+- orange: special theorem/statement    (proofen in this paper)
