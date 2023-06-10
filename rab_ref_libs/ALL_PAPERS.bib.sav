@@ -651,6 +651,7 @@ shortcomings of standard operating procedures used today.},
   file           = {:2019_Togninalli_NIPS.pdf:PDF},
   groups         = {GraphKernels},
   qualityassured = {qualityAssured},
+  readstatus     = {read},
   url            = {https://proceedings.neurips.cc/paper_files/paper/2019/file/73fed7fd472e502d8908794430511f4d-Paper.pdf},
 }
 
@@ -1739,6 +1740,80 @@ maintaining a competitive classification accuracy.},
   qualityassured = {qualityAssured},
 }
 
+@Article{2018_Krakovna_Article,
+  author         = {Krakovna, Viktoriya and Orseau, Laurent and Martic, Miljan and Legg, Shane},
+  title          = {Measuring and avoiding side effects using relative reachability},
+  year           = {2018},
+  month          = {06},
+  abstract       = {How can we design reinforcement learning agents that avoid causing unnecessary disruptions to their environment? We argue that current approaches to penalizing side effects can introduce bad incentives in tasks that require irreversible actions, and in environments that contain sources of change other than the agent. For example, some approaches give the agent an incentive to prevent any irreversible changes in the environment, including the actions of other agents. We introduce a general definition of side effects, based on relative reachability of states compared to a default state, that avoids these undesirable incentives. Using a set of gridworld experiments illustrating relevant scenarios, we empirically compare relative reachability to penalties based on existing definitions and show that it is the only penalty among those tested that produces the desired behavior in all the scenarios.},
+  comment        = {RL Project Bachelor Thesis - Alex Roucka
+
+See also "Penalizing side effects using stepwise relative reachability" by Krakovna et al.},
+  groups         = {Alex Roucka},
+  qualityassured = {qualityAssured},
+  readstatus     = {read},
+  url            = {https://www.researchgate.net/publication/325557348_Measuring_and_avoiding_side_effects_using_relative_reachability},
+}
+
+@InProceedings{2020_Turner_InProceedings,
+  author    = {Turner, Alex and Ratzlaff, Neale and Tadepalli, Prasad},
+  booktitle = {Advances in Neural Information Processing Systems},
+  title     = {{A}voiding {S}ide {E}ffects in {C}omplex {E}nvironments},
+  year      = {2020},
+  editor    = {H. Larochelle and M. Ranzato and R. Hadsell and M.F. Balcan and H. Lin},
+  pages     = {21406--21415},
+  publisher = {Curran Associates, Inc.},
+  volume    = {33},
+  abstract  = {Reward function specification can be difficult. Rewarding the agent for making a widget may be easy, but penalizing the multitude of possible negative side effects is hard. In toy environments, Attainable Utility Preservation (AUP) avoided side effects by penalizing shifts in the ability to achieve randomly generated goals. We scale this approach to large, randomly generated environments based on Conway's Game of Life. By preserving optimal value for a single randomly generated reward function, AUP incurs modest overhead while leading the agent to complete the specified task and avoid many side effects. Videos and code are available at https://avoiding-side-effects.github.io/.},
+  comment   = {RL Project Bachelor Thesis - Alex Roucka},
+  groups    = {Alex Roucka},
+  priority  = {prio1},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2020/file/f50a6c02a3fc5a3a5d4d9391f05f3efc-Paper.pdf},
+}
+
+@Misc{2018_Krakovna_Misc,
+  author     = {Krakovna, Victoria and Orseau, Laurent and Kumar, Ramana and Martic, Miljan and Legg, Shane},
+  title      = {Penalizing side effects using stepwise relative reachability},
+  year       = {2018},
+  abstract   = {How can we design safe reinforcement learning agents that avoid unnecessary disruptions to their environment? We show that current approaches to penalizing side effects can introduce bad incentives, e.g. to prevent any irreversible changes in the environment, including the actions of other agents. To isolate the source of such undesirable incentives, we break down side effects penalties into two components: a baseline state and a measure of deviation from this baseline state. We argue that some of these incentives arise from the choice of baseline, and others arise from the choice of deviation measure. We introduce a new variant of the stepwise inaction baseline and a new deviation measure based on relative reachability of states. The combination of these design choices avoids the given undesirable incentives, while simpler baselines and the unreachability measure fail. We demonstrate this empirically by comparing different combinations of baseline and deviation measure choices on a set of gridworld experiments designed to illustrate possible bad incentives.},
+  comment    = {RL Project Bachelor Thesis - Alex Roucka
+
+Goal: RL agents that avoid causing unnecessary disruptions to their environment.
+
+Idea: Use relative reachabiliyt from a baseline state as measure of disruption to the environment.
+
+Gridworld Experiments},
+  copyright  = {arXiv.org perpetual, non-exclusive license},
+  doi        = {10.48550/ARXIV.1806.01186},
+  groups     = {Alex Roucka},
+  keywords   = {Machine Learning (cs.LG), Artificial Intelligence (cs.AI), Machine Learning (stat.ML), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  publisher  = {arXiv},
+  readstatus = {read},
+  url        = {https://arxiv.org/abs/1806.01186},
+}
+
+@InProceedings{2020_Turner_InProceedingsa,
+  author         = {Alexander Matt Turner and Dylan Hadfield-Menell and Prasad Tadepalli},
+  booktitle      = {Proceedings of the {AAAI}/{ACM} Conference on {AI}, Ethics, and Society},
+  title          = {{C}onservative {A}gency via {A}ttainable {U}tility {P}reservation},
+  year           = {2020},
+  month          = {feb},
+  publisher      = {{ACM}},
+  abstract       = {Reward functions are easy to misspecify; although designers can make corrections after observing mistakes, an agent pursuing a misspecified reward function can irreversibly change the state of its environment. If that change precludes optimization of the correctly specified reward function, then correction is futile. For example, a robotic factory assistant could break expensive equipment due to a reward misspecification; even if the designers immediately correct the reward function, the damage is done. To mitigate this risk, we introduce an approach that balances optimization of the primary reward function with preservation of the ability to optimize auxiliary reward functions. Surprisingly, even when the auxiliary reward functions are randomly generated and therefore uninformative about the correctly specified reward function, this approach induces conservative, effective behavior.},
+  comment        = {RL Project Bachelor Thesis - Alex Roucka
+
+Implementations in aup.py and model_free_agent_py in "Attainable Utility Preservation" (https://github.com/alexander-turner/attainable-utility-preservation).
+
+
+
+Improvements over this approaches in "Penalizing side effects using stepwise relative reachability" by Krakovna et al.},
+  doi            = {10.1145/3375627.3375851},
+  groups         = {Alex Roucka},
+  qualityassured = {qualityAssured},
+  readstatus     = {read},
+  url            = {https://dl.acm.org/doi/abs/10.1145/3375627.3375851?casa_token=TOj2-yjPZYEAAAAA:4BKWRa1IBaYiDlTDq_ykSQ48wH0sMMHfzWd_3nN4EF7fqKF9iS7XYAXVkJV_WIpWtoC9wpRiFy4lHw},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: fileDirectory:/home/fabrice/Documents/library/papers;}
@@ -1753,6 +1828,8 @@ maintaining a competitive classification accuracy.},
 2 StaticGroup:GraphKernels\;0\;1\;0x4d804dff\;GRAPH_OUTLINE\;\;;
 2 StaticGroup:ReinforcementLearning\;0\;1\;0x808000ff\;ROBOT\;\;;
 2 StaticGroup:SupportVectorMachines\;0\;0\;0xe6b34dff\;AB_TESTING\;\;;
+1 StaticGroup:Projects\;0\;1\;0xffffffff\;ACCOUNT_GROUP\;Subgroups based on Projects\;;
+2 StaticGroup:Alex Roucka\;0\;1\;0xffffffff\;\;His Bachelor Thesis based on AI Gridworlds, Reinforcement Learning, Q Learning, Relative Reachability and Attainable Utitlity Preservation\;;
 }
 
 @Comment{jabref-meta: saveActions:disabled;
