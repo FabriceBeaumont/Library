@@ -817,13 +817,15 @@ pirically show that our approach significantly outperforms the concept of tree e
 state-of-the-art methods in terms of predictive performance tive unfolding trees. These kind of distances provide
 on datasets containing structurally more complex graphs be-
 yond the typically considered molecular graphs. a natural comparison for trees. On an abstract level,},
+  comment        = {Unfolding tree definition},
   copyright      = {arXiv.org perpetual, non-exclusive license},
   doi            = {10.48550/ARXIV.2101.08104},
   file           = {:2021_Schulz_CONF.pdf:PDF},
-  groups         = {GraphKernels},
+  groups         = {GraphKernels, Weisfeiler-Lehman-Related},
   keywords       = {Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
   publisher      = {arXiv},
   qualityassured = {qualityAssured},
+  readstatus     = {read},
   url            = {https://ui.adsabs.harvard.edu/abs/2021arXiv210108104H/abstract},
 }
 
@@ -1756,40 +1758,42 @@ See also "Penalizing side effects using stepwise relative reachability" by Krako
 }
 
 @InProceedings{2020_Turner_InProceedings,
-  author     = {Turner, Alex and Ratzlaff, Neale and Tadepalli, Prasad},
-  booktitle  = {Advances in Neural Information Processing Systems},
-  title      = {{A}voiding {S}ide {E}ffects in {C}omplex {E}nvironments},
-  year       = {2020},
-  editor     = {H. Larochelle and M. Ranzato and R. Hadsell and M.F. Balcan and H. Lin},
-  pages      = {21406--21415},
-  publisher  = {Curran Associates, Inc.},
-  volume     = {33},
-  abstract   = {Reward function specification can be difficult. Rewarding the agent for making a widget may be easy, but penalizing the multitude of possible negative side effects is hard. In toy environments, Attainable Utility Preservation (AUP) avoided side effects by penalizing shifts in the ability to achieve randomly generated goals. We scale this approach to large, randomly generated environments based on Conway's Game of Life. By preserving optimal value for a single randomly generated reward function, AUP incurs modest overhead while leading the agent to complete the specified task and avoid many side effects. Videos and code are available at https://avoiding-side-effects.github.io/.},
-  comment    = {RL Project Bachelor Thesis - Alex Roucka},
-  groups     = {Alex Roucka},
-  readstatus = {skimmed},
-  url        = {https://proceedings.neurips.cc/paper_files/paper/2020/file/f50a6c02a3fc5a3a5d4d9391f05f3efc-Paper.pdf},
+  author         = {Turner, Alex and Ratzlaff, Neale and Tadepalli, Prasad},
+  booktitle      = {Advances in Neural Information Processing Systems},
+  title          = {{A}voiding {S}ide {E}ffects in {C}omplex {E}nvironments},
+  year           = {2020},
+  editor         = {H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin},
+  pages          = {21406--21415},
+  publisher      = {Curran Associates, Inc.},
+  volume         = {33},
+  abstract       = {Reward function specification can be difficult. Rewarding the agent for making a widget may be easy, but penalizing the multitude of possible negative side effects is hard. In toy environments, Attainable Utility Preservation (AUP) avoided side effects by penalizing shifts in the ability to achieve randomly generated goals. We scale this approach to large, randomly generated environments based on Conway's Game of Life. By preserving optimal value for a single randomly generated reward function, AUP incurs modest overhead while leading the agent to complete the specified task and avoid many side effects. Videos and code are available at https://avoiding-side-effects.github.io/.},
+  comment        = {RL Project Bachelor Thesis - Alex Roucka},
+  groups         = {Alex Roucka},
+  qualityassured = {qualityAssured},
+  readstatus     = {skimmed},
+  url            = {https://proceedings.neurips.cc/paper_files/paper/2020/file/f50a6c02a3fc5a3a5d4d9391f05f3efc-Paper.pdf},
 }
 
 @Misc{2018_Krakovna_Misc,
-  author     = {Krakovna, Victoria and Orseau, Laurent and Kumar, Ramana and Martic, Miljan and Legg, Shane},
-  title      = {Penalizing side effects using stepwise relative reachability},
-  year       = {2018},
-  abstract   = {How can we design safe reinforcement learning agents that avoid unnecessary disruptions to their environment? We show that current approaches to penalizing side effects can introduce bad incentives, e.g. to prevent any irreversible changes in the environment, including the actions of other agents. To isolate the source of such undesirable incentives, we break down side effects penalties into two components: a baseline state and a measure of deviation from this baseline state. We argue that some of these incentives arise from the choice of baseline, and others arise from the choice of deviation measure. We introduce a new variant of the stepwise inaction baseline and a new deviation measure based on relative reachability of states. The combination of these design choices avoids the given undesirable incentives, while simpler baselines and the unreachability measure fail. We demonstrate this empirically by comparing different combinations of baseline and deviation measure choices on a set of gridworld experiments designed to illustrate possible bad incentives.},
-  comment    = {RL Project Bachelor Thesis - Alex Roucka
+  author         = {Krakovna, Victoria and Orseau, Laurent and Kumar, Ramana and Martic, Miljan and Legg, Shane},
+  title          = {Penalizing side effects using stepwise relative reachability},
+  year           = {2018},
+  abstract       = {How can we design safe reinforcement learning agents that avoid unnecessary disruptions to their environment? We show that current approaches to penalizing side effects can introduce bad incentives, e.g. to prevent any irreversible changes in the environment, including the actions of other agents. To isolate the source of such undesirable incentives, we break down side effects penalties into two components: a baseline state and a measure of deviation from this baseline state. We argue that some of these incentives arise from the choice of baseline, and others arise from the choice of deviation measure. We introduce a new variant of the stepwise inaction baseline and a new deviation measure based on relative reachability of states. The combination of these design choices avoids the given undesirable incentives, while simpler baselines and the unreachability measure fail. We demonstrate this empirically by comparing different combinations of baseline and deviation measure choices on a set of gridworld experiments designed to illustrate possible bad incentives.},
+  comment        = {RL Project Bachelor Thesis - Alex Roucka
 
 Goal: RL agents that avoid causing unnecessary disruptions to their environment.
 
 Idea: Use relative reachabiliyt from a baseline state as measure of disruption to the environment.
 
 Gridworld Experiments},
-  copyright  = {arXiv.org perpetual, non-exclusive license},
-  doi        = {10.48550/ARXIV.1806.01186},
-  groups     = {Alex Roucka},
-  keywords   = {Machine Learning (cs.LG), Artificial Intelligence (cs.AI), Machine Learning (stat.ML), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  publisher  = {arXiv},
-  readstatus = {read},
-  url        = {https://arxiv.org/abs/1806.01186},
+  copyright      = {arXiv.org perpetual, non-exclusive license},
+  doi            = {10.48550/ARXIV.1806.01186},
+  groups         = {Alex Roucka},
+  keywords       = {Machine Learning (cs.LG), Artificial Intelligence (cs.AI), Machine Learning (stat.ML), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+  readstatus     = {read},
+  url            = {https://arxiv.org/abs/1806.01186},
 }
 
 @InProceedings{2020_Turner_InProceedingsa,
@@ -1830,6 +1834,8 @@ Improvements over this approaches in "Penalizing side effects using stepwise rel
 2 StaticGroup:SupportVectorMachines\;0\;0\;0xe6b34dff\;AB_TESTING\;\;;
 1 StaticGroup:Projects\;0\;1\;0xffffffff\;ACCOUNT_GROUP\;Subgroups based on Projects\;;
 2 StaticGroup:Alex Roucka\;0\;1\;0xffffffff\;\;His Bachelor Thesis based on AI Gridworlds, Reinforcement Learning, Q Learning, Relative Reachability and Attainable Utitlity Preservation\;;
+2 StaticGroup:MasterThesis_ComputerScience\;0\;1\;0xffffffff\;BOOK_EDUCATION\;Most relevant papers\;;
+2 StaticGroup:Weisfeiler-Lehman-Related\;0\;1\;0xffffffff\;UNGROUP\;\;;
 }
 
 @Comment{jabref-meta: saveActions:disabled;
