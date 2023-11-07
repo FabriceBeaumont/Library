@@ -794,6 +794,7 @@ shortcomings of standard operating procedures used today.},
   keywords       = {divergence, domain adaptation, optimal transport, optimization},
   numpages       = {8},
   qualityassured = {qualityAssured},
+  readstatus     = {skimmed},
 }
 
 @Misc{2021_Schulz_Misc,
@@ -1245,6 +1246,7 @@ either computationally expensive, sometimes even NP-hard},
   file           = {:2006_Bishop_BOOK.pdf:PDF},
   groups         = {MachineLearning},
   qualityassured = {qualityAssured},
+  readstatus     = {skimmed},
   url            = {https://link.springer.com/book/9780387310732},
 }
 
@@ -1751,6 +1753,7 @@ maintaining a competitive classification accuracy.},
   comment        = {RL Project Bachelor Thesis - Alex Roucka
 
 See also "Penalizing side effects using stepwise relative reachability" by Krakovna et al.},
+  file           = {:2018_Krakovna_Article.pdf:PDF},
   groups         = {Alex Roucka},
   qualityassured = {qualityAssured},
   readstatus     = {read},
@@ -1768,6 +1771,7 @@ See also "Penalizing side effects using stepwise relative reachability" by Krako
   volume         = {33},
   abstract       = {Reward function specification can be difficult. Rewarding the agent for making a widget may be easy, but penalizing the multitude of possible negative side effects is hard. In toy environments, Attainable Utility Preservation (AUP) avoided side effects by penalizing shifts in the ability to achieve randomly generated goals. We scale this approach to large, randomly generated environments based on Conway's Game of Life. By preserving optimal value for a single randomly generated reward function, AUP incurs modest overhead while leading the agent to complete the specified task and avoid many side effects. Videos and code are available at https://avoiding-side-effects.github.io/.},
   comment        = {RL Project Bachelor Thesis - Alex Roucka},
+  file           = {:2020_Turner_InProceedings.pdf:PDF},
   groups         = {Alex Roucka},
   qualityassured = {qualityAssured},
   readstatus     = {skimmed},
@@ -1788,6 +1792,7 @@ Idea: Use relative reachabiliyt from a baseline state as measure of disruption t
 Gridworld Experiments},
   copyright      = {arXiv.org perpetual, non-exclusive license},
   doi            = {10.48550/ARXIV.1806.01186},
+  file           = {:2018_Krakovna_Misc.pdf:PDF},
   groups         = {Alex Roucka},
   keywords       = {Machine Learning (cs.LG), Artificial Intelligence (cs.AI), Machine Learning (stat.ML), FOS: Computer and information sciences, FOS: Computer and information sciences},
   publisher      = {arXiv},
@@ -1797,30 +1802,819 @@ Gridworld Experiments},
 }
 
 @InProceedings{2020_Turner_InProceedingsa,
-  author         = {Alexander Matt Turner and Dylan Hadfield-Menell and Prasad Tadepalli},
-  booktitle      = {Proceedings of the {AAAI}/{ACM} Conference on {AI}, Ethics, and Society},
-  title          = {{C}onservative {A}gency via {A}ttainable {U}tility {P}reservation},
-  year           = {2020},
-  month          = {feb},
-  publisher      = {{ACM}},
-  abstract       = {Reward functions are easy to misspecify; although designers can make corrections after observing mistakes, an agent pursuing a misspecified reward function can irreversibly change the state of its environment. If that change precludes optimization of the correctly specified reward function, then correction is futile. For example, a robotic factory assistant could break expensive equipment due to a reward misspecification; even if the designers immediately correct the reward function, the damage is done. To mitigate this risk, we introduce an approach that balances optimization of the primary reward function with preservation of the ability to optimize auxiliary reward functions. Surprisingly, even when the auxiliary reward functions are randomly generated and therefore uninformative about the correctly specified reward function, this approach induces conservative, effective behavior.},
-  comment        = {RL Project Bachelor Thesis - Alex Roucka
+  author     = {Alexander Matt Turner and Dylan Hadfield-Menell and Prasad Tadepalli},
+  booktitle  = {Proceedings of the {AAAI}/{ACM} Conference on {AI}, Ethics, and Society},
+  title      = {{C}onservative {A}gency via {A}ttainable {U}tility {P}reservation},
+  year       = {2020},
+  month      = {feb},
+  publisher  = {{ACM}},
+  abstract   = {Reward functions are easy to misspecify; although designers can make corrections after observing mistakes, an agent pursuing a misspecified reward function can irreversibly change the state of its environment. If that change precludes optimization of the correctly specified reward function, then correction is futile. For example, a robotic factory assistant could break expensive equipment due to a reward misspecification; even if the designers immediately correct the reward function, the damage is done. To mitigate this risk, we introduce an approach that balances optimization of the primary reward function with preservation of the ability to optimize auxiliary reward functions. Surprisingly, even when the auxiliary reward functions are randomly generated and therefore uninformative about the correctly specified reward function, this approach induces conservative, effective behavior.},
+  comment    = {RL Project Bachelor Thesis - Alex Roucka
 
 Implementations in aup.py and model_free_agent_py in "Attainable Utility Preservation" (https://github.com/alexander-turner/attainable-utility-preservation).
 
 
 
 Improvements over this approaches in "Penalizing side effects using stepwise relative reachability" by Krakovna et al.},
-  doi            = {10.1145/3375627.3375851},
-  groups         = {Alex Roucka},
+  doi        = {10.1145/3375627.3375851},
+  file       = {:2020_Turner_InProceedingsa.pdf:PDF},
+  groups     = {Alex Roucka},
+  readstatus = {read},
+  url        = {https://dl.acm.org/doi/abs/10.1145/3375627.3375851?casa_token=TOj2-yjPZYEAAAAA:4BKWRa1IBaYiDlTDq_ykSQ48wH0sMMHfzWd_3nN4EF7fqKF9iS7XYAXVkJV_WIpWtoC9wpRiFy4lHw},
+}
+
+@Misc{2023_Waeldchen_Misc,
+  author         = {Wäldchen, Stephan},
+  title          = {{H}ardness of {D}eceptive {C}ertificate {S}election},
+  year           = {2023},
+  abstract       = {Recent progress towards theoretical interpretability guarantees for AI has been made with classifiers that are based on interactive proof systems. A prover selects a certificate from the datapoint and sends it to a verifier who decides the class. In the context of machine learning, such a certificate can be a feature that is informative of the class. For a setup with high soundness and completeness, the exchanged certificates must have a high mutual information with the true class of the datapoint. However, this guarantee relies on a bound on the Asymmetric Feature Correlation of the dataset, a property that so far is difficult to estimate for high-dimensional data. It was conjectured in Wäldchen et al. that it is computationally hard to exploit the AFC, which is what we prove here.
+We consider a malicious prover-verifier duo that aims to exploit the AFC to achieve high completeness and soundness while using uninformative certificates. We show that this task is 𝖭𝖯-hard and cannot be approximated better than $\mathcal{O}(m^{1/8}−ϵ)$, where m is the number of possible certificates, for ϵ>0 under the Dense-vs-Random conjecture. This is some evidence that AFC should not prevent the use of interactive classification for real-world tasks, as it is computationally hard to be exploited.},
+  copyright      = {Creative Commons Attribution Share Alike 4.0 International},
+  doi            = {10.48550/ARXIV.2306.04505},
+  file           = {:2023_Waeldchen_Misc.pdf:PDF},
+  groups         = {TU-Berlin-Wäldchen},
+  keywords       = {Machine Learning (cs.LG), Artificial Intelligence (cs.AI), Computational Complexity (cs.CC), Cryptography and Security (cs.CR), FOS: Computer and information sciences, FOS: Computer and information sciences, I.2.0, 68T01, 91A06},
+  priority       = {prio1},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+  url            = {https://arxiv.org/abs/2306.04505},
+}
+
+@Misc{2023_Waeldchen_Misca,
+  author         = {Stephan Waeldchen and Kartikey Sharma and Max Zimmer and Berkant Turan and Sebastian Pokutta},
+  title          = {{F}ormal {I}nterpretability with {M}erlin-{A}rthur {C}lassifiers},
+  year           = {2023},
+  abstract       = {We propose a new type of multi-agent interactive classifier that provides, for the first time, provable interpretability guarantees even for complex agents such as neural networks.   In our setting, which is inspired by the Merlin-Arthur protocol from Interactive Proof Systems, two agents cooperate to provide a classification: the prover selects a small set of features as a certificate and presents it to the verifier who decides the class. A second, adversarial prover ensures the truthfulness of the system and allows us to connect the game-theoretic equilibrium between the provers and the verifier to guarantees on the exchanged features. We define completeness and soundness metrics to provide a lower bound on the mutual information between the features and the class. Our experiments demonstrate good agreement between theory and practice using neural network classifiers, and we show how our setup practically prevents manipulation.
+Anonymous Url: I certify that there is no URL (e.g., github page) that could be used to find authors’ identity.},
+  file           = {:2023_Waeldchen_Misca.pdf:PDF},
+  groups         = {TU-Berlin-Wäldchen},
+  qualityassured = {qualityAssured},
+  readstatus     = {skimmed},
+  url            = {https://openreview.net/forum?id=7hvbaJ1AbaM},
+}
+
+@Article{2023_Aigner_Article,
+  author         = {Kevin-Martin Aigner and Andreas Bärmann and Kristin Braun and Frauke Liers and Sebastian Pokutta and Oskar Schneider and Kartikey Sharma and Sebastian Tschuppik},
+  journal        = {{INFORMS} Journal on Optimization},
+  title          = {{D}ata-{D}riven {D}istributionally {R}obust {O}ptimization over {T}ime},
+  year           = {2023},
+  month          = {may},
+  doi            = {10.1287/ijoo.2023.0091},
+  file           = {:2023_Aigner_Article.pdf:PDF},
+  groups         = {TU-Berlin-Wäldchen},
+  publisher      = {Institute for Operations Research and the Management Sciences ({INFORMS})},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2012_Chatterjee_Article,
+  author         = {Krishnendu Chatterjee and Thomas A. Henzinger},
+  journal        = {Journal of Computer and System Sciences},
+  title          = {A survey of stochastic $\upomega$-regular games},
+  year           = {2012},
+  month          = {mar},
+  number         = {2},
+  pages          = {394--413},
+  volume         = {78},
+  doi            = {10.1016/j.jcss.2011.05.002},
+  file           = {:2012_Chatterjee_Article.pdf:PDF},
+  groups         = {TU-Berlin-Wäldchen},
+  priority       = {prio1},
+  publisher      = {Elsevier {BV}},
+  qualityassured = {qualityAssured},
+  url            = {https://www.sciencedirect.com/science/article/pii/S0022000011000511},
+}
+
+@Article{2003_Gent_Article,
+  author         = {Gent, Ian P. and Rowley, A. G.},
+  journal        = {2nd Intl. Work. Modelling and Reform. CSP},
+  title          = {{E}ncoding {C}onnect-4 using quantified {B}oolean formulae},
+  year           = {2003},
+  pages          = {78--93},
+  file           = {:2003_Gent_Article.pdf:PDF},
+  groups         = {TU-Berlin-Wäldchen},
+  priority       = {prio1},
+  qualityassured = {qualityAssured},
+  url            = {https://d1wqtxts1xzle7.cloudfront.net/30670545/10.1.1.103.1700-libre.pdf?1391790683=&response-content-disposition=inline;+filename=Encoding_Connect_4_using_quantified_Bool.pdf&Expires=1687865352&Signature=cLkaH0TuZy4hJ02YQesgL6TtfZjBh0eEPlWSI4GhSkEQmFNR~BxTIy8H26~FSzIWcMjFzsJlkcYRi2LdG5-GI7B404QX8DVwDzvJuecwLB3k3trryWT6SWyYzCicwrjTbSq~hdI4~KgZhqSaFiDeRhkz-yA7XHqBMqFDCbKAVYnjFbMFWmRWwdFBSeE58nmGehPnzcemL3DXSVVChdsZ9l82cw13VQ8qwzMWaXDV6uqjntwnENwYnZLKpmMjla57Pup1ftpARxzdBSnlUSc8VI7lilmETQJSljBVj--0MepubPTImdxYsRupbCvjU4Vwq2MqiAU1q~dhrI4O~uuUvg__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA#page=84},
+}
+
+@Article{0_Mares_Article,
+  author         = {B. J. Mares},
+  title          = {{A} detailed proof that {IP}={PSPACE}},
+  file           = {:0_Mares_Article.pdf:PDF},
+  groups         = {TU-Berlin-Wäldchen},
+  priority       = {prio1},
+  qualityassured = {qualityAssured},
+  url            = {https://cs.brown.edu/courses/gs019/},
+}
+
+@Article{2018_Hamilton_Article,
+  author         = {Liberty S. Hamilton and Alexander G. Huth},
+  journal        = {Language, Cognition and Neuroscience},
+  title          = {The revolution will not be controlled: natural stimuli in speech neuroscience},
+  year           = {2018},
+  month          = {jul},
+  number         = {5},
+  pages          = {573--582},
+  volume         = {35},
+  doi            = {10.1080/23273798.2018.1499946},
+  file           = {:2018_Hamilton_Article.pdf:PDF},
+  groups         = {Neuroscience&ML},
+  publisher      = {Informa {UK} Limited},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2016_Huth_Article,
+  author         = {Alexander G. Huth and Wendy A. de Heer and Thomas L. Griffiths and Fr{\'{e}}d{\'{e}}ric E. Theunissen and Jack L. Gallant},
+  journal        = {Nature},
+  title          = {Natural speech reveals the semantic maps that tile human cerebral cortex},
+  year           = {2016},
+  month          = {apr},
+  number         = {7600},
+  pages          = {453--458},
+  volume         = {532},
+  doi            = {10.1038/nature17637},
+  file           = {:2016_Huth_Article.pdf:PDF},
+  groups         = {Neuroscience&ML},
+  publisher      = {Springer Science and Business Media {LLC}},
+  qualityassured = {qualityAssured},
+}
+
+@InProceedings{2018_Fridman_InProceedings,
+  author         = {Lex Fridman and Bryan Reimer and Bruce Mehler and William T. Freeman},
+  booktitle      = {Proceedings of the 2018 {CHI} Conference on Human Factors in Computing Systems},
+  title          = {{C}ognitive {L}oad {E}stimation in the {W}ild},
+  year           = {2018},
+  month          = {apr},
+  publisher      = {{ACM}},
+  doi            = {10.1145/3173574.3174226},
+  file           = {:2018_Fridman_InProceedings.pdf:PDF},
+  groups         = {LexFridman},
+  qualityassured = {qualityAssured},
+}
+
+@InProceedings{2017_Fridman_InProceedings,
+  author         = {Lex Fridman and Heishiro Toyoda and Sean Seaman and Bobbie Seppelt and Linda Angell and Joonbum Lee and Bruce Mehler and Bryan Reimer},
+  booktitle      = {Proceedings of the 2017 {CHI} Conference on Human Factors in Computing Systems},
+  title          = {{W}hat {C}an {B}e {P}redicted from {S}ix {S}econds of {D}river {G}lances?},
+  year           = {2017},
+  month          = {may},
+  publisher      = {{ACM}},
+  doi            = {10.1145/3025453.3025929},
+  file           = {:2017_Fridman_InProceedings.pdf:PDF},
+  groups         = {LexFridman},
+  qualityassured = {qualityAssured},
+}
+
+@Misc{2018_Fridman_Misc,
+  author         = {Fridman, Lex and Terwilliger, Jack and Jenik, Benedikt},
+  title          = {{D}eep{T}raffic: {C}rowdsourced {H}yperparameter {T}uning of {D}eep {R}einforcement {L}earning {S}ystems for {M}ulti-{A}gent {D}ense {T}raffic {N}avigation},
+  year           = {2018},
+  abstract       = {We present a traffic simulation named DeepTraffic where the planning systems for a subset of the vehicles are handled by a neural network as part of a model-free, off-policy reinforcement learning process. The primary goal of DeepTraffic is to make the hands-on study of deep reinforcement learning accessible to thousands of students, educators, and researchers in order to inspire and fuel the exploration and evaluation of deep Q-learning network variants and hyperparameter configurations through large-scale, open competition. This paper investigates the crowd-sourced hyperparameter tuning of the policy network that resulted from the first iteration of the DeepTraffic competition where thousands of participants actively searched through the hyperparameter space.},
+  copyright      = {arXiv.org perpetual, non-exclusive license},
+  doi            = {10.48550/ARXIV.1801.02805},
+  file           = {:2018_Fridman_Misc.pdf:PDF},
+  groups         = {LexFridman},
+  keywords       = {Neural and Evolutionary Computing (cs.NE), Artificial Intelligence (cs.AI), Robotics (cs.RO), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2018_Awad_Article,
+  author         = {Edmond Awad and Sohan Dsouza and Richard Kim and Jonathan Schulz and Joseph Henrich and Azim Shariff and Jean-Fran{\c{c}}ois Bonnefon and Iyad Rahwan},
+  journal        = {Nature},
+  title          = {{T}he {M}oral {M}achine experiment},
+  year           = {2018},
+  month          = {oct},
+  number         = {7729},
+  pages          = {59--64},
+  volume         = {563},
+  abstract       = {With the rapid development of artificial intelligence have come concerns about how machines will make moral decisions, and the major challenge of quantifying societal expectations about the ethical principles that should guide machine behaviour. To address this challenge, we deployed the Moral Machine, an online experimental platform designed to explore the moral dilemmas faced by autonomous vehicles. This platform gathered 40 million decisions in ten languages from millions of people in 233 countries and territories. Here we describe the results of this experiment. First, we summarize global moral preferences. Second, we document individual variations in preferences, based on respondents’ demographics. Third, we report cross-cultural ethical variation, and uncover three major clusters of countries. Fourth, we show that these differences correlate with modern institutions and deep cultural traits. We discuss how these preferences can contribute to developing global, socially acceptable principles for machine ethics. All data used in this article are publicly available.},
+  doi            = {10.1038/s41586-018-0637-6},
+  file           = {:2018_Awad_Article.pdf:PDF},
+  groups         = {MaxPlanck},
+  publisher      = {Springer Science and Business Media {LLC}},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2016_Bonnefon_Article,
+  author         = {Jean-Fran{\c{c}}ois Bonnefon and Azim Shariff and Iyad Rahwan},
+  journal        = {Science},
+  title          = {The social dilemma of autonomous vehicles},
+  year           = {2016},
+  month          = {jun},
+  number         = {6293},
+  pages          = {1573--1576},
+  volume         = {352},
+  doi            = {10.1126/science.aaf2654},
+  file           = {:2016_Bonnefon_Article.pdf:PDF},
+  groups         = {MaxPlanck},
+  publisher      = {American Association for the Advancement of Science ({AAAS})},
+  qualityassured = {qualityAssured},
+  url            = {https://www.science.org/doi/abs/10.1126/science.aaf2654},
+}
+
+@Misc{2022_Chen_Misc,
+  author         = {Chen, Yubei and Bardes, Adrien and Li, Zengyi and LeCun, Yann},
+  title          = {{B}ag of {I}mage {P}atch {E}mbedding {B}ehind the {S}uccess of {S}elf-{S}upervised {L}earning},
+  year           = {2022},
+  copyright      = {arXiv.org perpetual, non-exclusive license},
+  doi            = {10.48550/ARXIV.2206.08954},
+  file           = {:2022_Chen_Misc.pdf:PDF},
+  groups         = {YanLeCun, SelfSupervisedLearning},
+  keywords       = {Computer Vision and Pattern Recognition (cs.CV), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@InProceedings{2019_Xian_InProceedings,
+  author         = {Yikun Xian and Zuohui Fu and S. Muthukrishnan and Gerard de Melo and Yongfeng Zhang},
+  booktitle      = {Proceedings of the 42nd International {ACM} {SIGIR} Conference on Research and Development in Information Retrieval},
+  title          = {{R}einforcement {K}nowledge {G}raph {R}easoning for {E}xplainable {R}ecommendation},
+  year           = {2019},
+  month          = {jul},
+  publisher      = {{ACM}},
+  abstract       = {Recent advances in personalized recommendation have sparked
+great interest in the exploitation of rich structured information
+provided by knowledge graphs. Unlike most existing approaches
+that only focus on leveraging knowledge graphs for more accurate
+recommendation, we perform explicit reasoning with knowledge
+for decision making so that the recommendations are generated
+and supported by an interpretable causal inference procedure. To
+this end, we propose a method called Policy-Guided Path Reason-
+ing (PGPR), which couples recommendation and interpretability
+by providing actual paths in a knowledge graph. Our contribu-
+tions include four aspects. We first highlight the significance of
+incorporating knowledge graphs into recommendation to formally
+define and interpret the reasoning process. Second, we propose a
+reinforcement learning (RL) approach featuring an innovative soft
+reward strategy, user-conditional action pruning and a multi-hop
+scoring function. Third, we design a policy-guided graph search
+algorithm to efficiently and effectively sample reasoning paths for
+recommendation. Finally, we extensively evaluate our method on
+several large-scale real-world benchmark datasets, obtaining favor-
+able results compared with state-of-the-art methods.},
+  doi            = {10.1145/3331184.3331203},
+  file           = {:2019_Xian_InProceedings.pdf:PDF},
+  groups         = {HPI},
+  priority       = {prio1},
+  qualityassured = {qualityAssured},
+  url            = {https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WCQXaGkAAAAJ&citation_for_view=WCQXaGkAAAAJ:mvPsJ3kp5DgC},
+}
+
+@InProceedings{2011_Hoffart_InProceedings,
+  author         = {Johannes Hoffart and Fabian M. Suchanek and Klaus Berberich and Edwin Lewis-Kelham and Gerard de Melo and Gerhard Weikum},
+  booktitle      = {Proceedings of the 20th international conference companion on World wide web},
+  title          = {{YAGO}2},
+  year           = {2011},
+  month          = {mar},
+  publisher      = {{ACM}},
+  abstract       = {We present YAGO2, an extension of the YAGO knowledge base with focus on temporal and spatial knowledge. It is automatically built from Wikipedia, GeoNames, and WordNet, and contains nearly 10 million entities and events, as well as 80 million facts representing general world knowledge. An enhanced data representation introduces time and location as first-class citizens. The wealth of spatio-temporal information in YAGO can be explored either graphically or through a special time- and space-aware query language.},
+  doi            = {10.1145/1963192.1963296},
+  file           = {:2011_Hoffart_InProceedings.pdf:PDF},
+  groups         = {HPI},
+  priority       = {prio1},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2021_Hogan_Article,
+  author         = {Aidan Hogan and Eva Blomqvist and Michael Cochez and Claudia D'amato and Gerard De Melo and Claudio Gutierrez and Sabrina Kirrane and Jos{\'{e}} Emilio Labra Gayo and Roberto Navigli and Sebastian Neumaier and Axel-Cyrille Ngonga Ngomo and Axel Polleres and Sabbir M. Rashid and Anisa Rula and Lukas Schmelzeisen and Juan Sequeda and Steffen Staab and Antoine Zimmermann},
+  journal        = {{ACM} Computing Surveys},
+  title          = {{K}nowledge {G}raphs},
+  year           = {2021},
+  month          = {jul},
+  number         = {4},
+  pages          = {1--37},
+  volume         = {54},
+  doi            = {10.1145/3447772},
+  file           = {:2021_Hogan_Article.pdf:PDF},
+  groups         = {HPI},
+  priority       = {prio1},
+  publisher      = {Association for Computing Machinery ({ACM})},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2014_Cambria_Article,
+  author         = {Erik Cambria and Bebo White},
+  journal        = {{IEEE} Computational Intelligence Magazine},
+  title          = {{J}umping {NLP} {C}urves: {A} {R}eview of {N}atural {L}anguage {P}rocessing {R}esearch [{R}eview {A}rticle]},
+  year           = {2014},
+  month          = {may},
+  number         = {2},
+  pages          = {48--57},
+  volume         = {9},
+  abstract       = {Natural language processing (NLP) is a theory-motivated range of computational techniques for the automatic analysis and representation of human language. NLP research has evolved from the era of punch cards and batch processing (in which the analysis of a sentence could take up to 7 minutes) to the era of Google and the likes of it (in which millions of webpages can be processed in less than a second). This review paper draws on recent developments in NLP research to look at the past, present, and future of NLP technology in a new light. Borrowing the paradigm of `jumping curves' from the field of business management and marketing prediction, this survey article reinterprets the evolution of NLP research as the intersection of three overlapping curves-namely Syntactics, Semantics, and Pragmatics Curveswhich will eventually lead NLP research to evolve into natural language understanding.},
+  doi            = {10.1109/mci.2014.2307227},
+  file           = {:2014_Cambria_Article.pdf:PDF},
+  groups         = {HPI, Language Processing},
+  priority       = {prio1},
+  publisher      = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2020_Kang_Article,
+  author         = {Yue Kang and Zhao Cai and Chee-Wee Tan and Qian Huang and Hefu Liu},
+  journal        = {Journal of Management Analytics},
+  title          = {Natural language processing ({NLP}) in management research: A literature review},
+  year           = {2020},
+  month          = {apr},
+  number         = {2},
+  pages          = {139--172},
+  volume         = {7},
+  doi            = {10.1080/23270012.2020.1756939},
+  file           = {:2020_Kang_Article.pdf:PDF},
+  groups         = {HPI, Language Processing},
+  priority       = {prio1},
+  publisher      = {Informa {UK} Limited},
+  qualityassured = {qualityAssured},
+}
+
+@Misc{2023_Welke_Misc,
+  author         = {Welke, Pascal and Thiessen, Maximilian and Jogl, Fabian and Gärtner, Thomas},
+  title          = {{E}xpectation-{C}omplete {G}raph {R}epresentations with {H}omomorphisms},
+  year           = {2023},
+  abstract       = {We investigate novel random graph embeddings that can be computed in expected polynomial time and that are able to distinguish all non-isomorphic graphs in expectation. Previous graph embeddings have limited expressiveness and either cannot distinguish all graphs or cannot be computed efficiently for every graph. To be able to approximate arbitrary functions on graphs, we are interested in efficient alternatives that become arbitrarily expressive with increasing resources. Our approach is based on Lovász' characterisation of graph isomorphism through an infinite dimensional vector of homomorphism counts. Our empirical evaluation shows competitive results on several benchmark graph learning tasks.},
+  copyright      = {Creative Commons Attribution 4.0 International},
+  doi            = {10.48550/ARXIV.2306.05838},
+  file           = {:2023_Welke_Misc.pdf:PDF},
+  groups         = {Graphtheory},
+  keywords       = {Machine Learning (cs.LG), Data Structures and Algorithms (cs.DS), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  priority       = {prio2},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@Misc{2023_BenShaul_Misc,
+  author         = {Ben-Shaul, Ido and Shwartz-Ziv, Ravid and Galanti, Tomer and Dekel, Shai and LeCun, Yann},
+  title          = {{R}everse {E}ngineering {S}elf-{S}upervised {L}earning},
+  year           = {2023},
+  abstract       = {Self-supervised learning (SSL) is a powerful tool in machine learning, but under-
+standing the learned representations and their underlying mechanisms remains
+a challenge. This paper presents an in-depth empirical analysis of SSL-trained
+representations, encompassing diverse models, architectures, and hyperparameters.
+Our study reveals an intriguing aspect of the SSL training process: it inherently
+facilitates the clustering of samples with respect to semantic labels, which is surpris-
+ingly driven by the SSL objective’s regularization term. This clustering process not
+only enhances downstream classification but also compresses the data information.
+Furthermore, we establish that SSL-trained representations align more closely with
+semantic classes rather than random classes. Remarkably, we show that learned rep-
+resentations align with semantic classes across various hierarchical levels, and this
+alignment increases during training and when moving deeper into the network. Our
+findings provide valuable insights into SSL’s representation learning mechanisms
+and their impact on performance across different sets of classes.},
+  copyright      = {Creative Commons Attribution 4.0 International},
+  doi            = {10.48550/ARXIV.2305.15614},
+  file           = {:2023_BenShaul_Misc.pdf:PDF},
+  groups         = {YanLeCun, SelfSupervisedLearning},
+  keywords       = {Machine Learning (cs.LG), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  priority       = {prio2},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@Misc{2023_Anil_Misc,
+  author         = {Anil, Rohan and Dai, Andrew M. and Firat, Orhan and Johnson, Melvin and Lepikhin, Dmitry and Passos, Alexandre and Shakeri, Siamak and Taropa, Emanuel and Bailey, Paige and Chen, Zhifeng and Chu, Eric and Clark, Jonathan H. and Shafey, Laurent El and Huang, Yanping and Meier-Hellstern, Kathy and Mishra, Gaurav and Moreira, Erica and Omernick, Mark and Robinson, Kevin and Ruder, Sebastian and Tay, Yi and Xiao, Kefan and Xu, Yuanzhong and Zhang, Yujing and Abrego, Gustavo Hernandez and Ahn, Junwhan and Austin, Jacob and Barham, Paul and Botha, Jan and Bradbury, James and Brahma, Siddhartha and Brooks, Kevin and Catasta, Michele and Cheng, Yong and Cherry, Colin and Choquette-Choo, Christopher A. and Chowdhery, Aakanksha and Crepy, Clément and Dave, Shachi and Dehghani, Mostafa and Dev, Sunipa and Devlin, Jacob and Díaz, Mark and Du, Nan and Dyer, Ethan and Feinberg, Vlad and Feng, Fangxiaoyu and Fienber, Vlad and Freitag, Markus and Garcia, Xavier and Gehrmann, Sebastian and Gonzalez, Lucas and Gur-Ari, Guy and Hand, Steven and Hashemi, Hadi and Hou, Le and Howland, Joshua and Hu, Andrea and Hui, Jeffrey and Hurwitz, Jeremy and Isard, Michael and Ittycheriah, Abe and Jagielski, Matthew and Jia, Wenhao and Kenealy, Kathleen and Krikun, Maxim and Kudugunta, Sneha and Lan, Chang and Lee, Katherine and Lee, Benjamin and Li, Eric and Li, Music and Li, Wei and Li, YaGuang and Li, Jian and Lim, Hyeontaek and Lin, Hanzhao and Liu, Zhongtao and Liu, Frederick and Maggioni, Marcello and Mahendru, Aroma and Maynez, Joshua and Misra, Vedant and Moussalem, Maysam and Nado, Zachary and Nham, John and Ni, Eric and Nystrom, Andrew and Parrish, Alicia and Pellat, Marie and Polacek, Martin and Polozov, Alex and Pope, Reiner and Qiao, Siyuan and Reif, Emily and Richter, Bryan and Riley, Parker and Ros, Alex Castro and Roy, Aurko and Saeta, Brennan and Samuel, Rajkumar and Shelby, Renee and Slone, Ambrose and Smilkov, Daniel and So, David R. and Sohn, Daniel and Tokumine, Simon and Valter, Dasha and Vasudevan, Vijay and Vodrahalli, Kiran and Wang, Xuezhi and Wang, Pidong and Wang, Zirui and Wang, Tao and Wieting, John and Wu, Yuhuai and Xu, Kelvin and Xu, Yunhan and Xue, Linting and Yin, Pengcheng and Yu, Jiahui and Zhang, Qiao and Zheng, Steven and Zheng, Ce and Zhou, Weikang and Zhou, Denny and Petrov, Slav and Wu, Yonghui},
+  title          = {{PaLM} 2 {T}echnical {R}eport},
+  year           = {2023},
+  abstract       = {We introduce PaLM 2, a new state-of-the-art language model that has better multilingual and reasoning capabilities and is more compute-efficient than its predecessor PaLM. PaLM 2 is a Transformer-based model trained using a mixture of objectives. Through extensive evaluations on English and multilingual language, and reasoning tasks, we demonstrate that PaLM 2 has significantly improved quality on downstream tasks across different model sizes, while simultaneously exhibiting faster and more efficient inference compared to PaLM. This improved efficiency enables broader deployment while also allowing the model to respond faster, for a more natural pace of interaction. PaLM 2 demonstrates robust reasoning capabilities exemplified by large improvements over PaLM on BIG-Bench and other reasoning tasks. PaLM 2 exhibits stable performance on a suite of responsible AI evaluations, and enables inference-time control over toxicity without additional overhead or impact on other capabilities. Overall, PaLM 2 achieves state-of-the-art performance across a diverse set of tasks and capabilities.
+When discussing the PaLM 2 family, it is important to distinguish between pre-trained models (of various sizes), fine-tuned variants of these models, and the user-facing products that use these models. In particular, user-facing products typically include additional pre- and post-processing steps. Additionally, the underlying models may evolve over time. Therefore, one should not expect the performance of user-facing products to exactly match the results reported in this report.},
+  copyright      = {Creative Commons Attribution Share Alike 4.0 International},
+  doi            = {10.48550/ARXIV.2305.10403},
+  file           = {:2023_Anil_Misc.pdf:PDF},
+  groups         = {Language Processing},
+  keywords       = {Computation and Language (cs.CL), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  priority       = {prio1},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@InProceedings{2023_Balestriero_InProceedings,
+  author         = {Randall Balestriero and Yann LeCun},
+  booktitle      = {{ICASSP} 2023 - 2023 {IEEE} International Conference on Acoustics, Speech and Signal Processing ({ICASSP})},
+  title          = {{F}ast and {E}xact {E}numeration of {D}eep {N}etworks {P}artitions {R}egions},
+  year           = {2023},
+  month          = {jun},
+  publisher      = {{IEEE}},
+  abstract       = {One fruitful formulation of Deep Networks (DNs) enabling their theoretical study and providing practical guidelines to practitioners relies on Piecewise Affine Splines. In that realm, a DN’s input-mapping is expressed as per-region affine map-ping where those regions are implicitly determined by the model’s architecture and form a partition of their input space. That partition –which is involved in all the results spanned from this line of research– has so far only been computed on 2/3-dimensional slices of the DN’s input space or estimated by random sampling. In this paper, we provide the first parallel algorithm that does exact enumeration of the DN’s partition regions. The proposed algorithm enables one to finally assess the closeness of the commonly employed approximations methods, e.g. based on random sampling of the DN input space. One of our key finding is that if one is only interested in regions with "large" volume, then uniform sampling of the space is highly efficient, but that if one is also interested in discovering the "small" regions of the partition, then uniform sampling is exponentially costly with the DN’s input space dimension. On the other hand, our proposed method has complexity scaling linearly with input dimension and the number of regions.},
+  doi            = {10.1109/icassp49357.2023.10095698},
+  file           = {:2023_Balestriero_InProceedings.pdf:PDF},
+  groups         = {YanLeCun},
+  qualityassured = {qualityAssured},
+}
+
+@Misc{2020_Kaplan_Misc,
+  author         = {Kaplan, Jared and McCandlish, Sam and Henighan, Tom and Brown, Tom B. and Chess, Benjamin and Child, Rewon and Gray, Scott and Radford, Alec and Wu, Jeffrey and Amodei, Dario},
+  title          = {{S}caling {L}aws for {N}eural {L}anguage {M}odels},
+  year           = {2020},
+  abstract       = {We study empirical scaling laws for language model performance on the cross-entropy loss. The loss scales as a power-law with model size, dataset size, and the amount of compute used for training, with some trends spanning more than seven orders of magnitude. Other architectural details such as network width or depth have minimal effects within a wide range. Simple equations govern the dependence of overfitting on model/dataset size and the dependence of training speed on model size. These relationships allow us to determine the optimal allocation of a fixed compute budget. Larger models are significantly more sample-efficient, such that optimally compute-efficient training involves training very large models on a relatively modest amount of data and stopping significantly before convergence.},
+  copyright      = {arXiv.org perpetual, non-exclusive license},
+  doi            = {10.48550/ARXIV.2001.08361},
+  file           = {:2020_Kaplan_Misc.pdf:PDF},
+  groups         = {Language Processing},
+  keywords       = {Machine Learning (cs.LG), Machine Learning (stat.ML), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  priority       = {prio2},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2017_Vaswani_Article,
+  author         = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  journal        = {Advances in neural information processing systems},
+  title          = {Attention is all you need},
+  year           = {2017},
+  volume         = {30},
+  abstract       = {The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.0 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.},
+  file           = {:2017_Vaswani_Article.pdf:PDF},
+  groups         = {MachineLearning},
+  priority       = {prio1},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2023_Khader_Article,
+  author         = {Firas Khader and Jakob Nikolas Kather and Gustav Müller-Franzes and Tianci Wang and Tianyu Han and Soroosh Tayebi Arasteh and Karim Hamesch and Keno Bressem and Christoph Haarburger and Johannes Stegmaier and Christiane Kuhl and Sven Nebelung and Daniel Truhn},
+  journal        = {Scientific Reports},
+  title          = {Medical transformer for multimodal survival prediction in intensive care: integration of imaging and non-imaging data},
+  year           = {2023},
+  month          = {jul},
+  number         = {1},
+  volume         = {13},
+  comment        = {MeTra results and ideas.
+
+Survival Prediction improves on a multimodal approach over unimodal approach using radiology images and clinical data.},
+  doi            = {10.1038/s41598-023-37835-1},
+  file           = {:2023_Khader_Article.pdf:PDF},
+  groups         = {COMFORT},
+  publisher      = {Springer Science and Business Media {LLC}},
   qualityassured = {qualityAssured},
   readstatus     = {read},
-  url            = {https://dl.acm.org/doi/abs/10.1145/3375627.3375851?casa_token=TOj2-yjPZYEAAAAA:4BKWRa1IBaYiDlTDq_ykSQ48wH0sMMHfzWd_3nN4EF7fqKF9iS7XYAXVkJV_WIpWtoC9wpRiFy4lHw},
+}
+
+@Article{2023_Busch_Article,
+  author         = {Felix Busch and Lisa C. Adams and Keno K. Bressem},
+  journal        = {Medical Science Educator},
+  title          = {{B}iomedical {E}thical {A}spects {T}owards the {I}mplementation of {A}rtificial {I}ntelligence in {M}edical {E}ducation},
+  year           = {2023},
+  month          = {jun},
+  doi            = {10.1007/s40670-023-01815-x},
+  file           = {:2023_Busch_Article.pdf:PDF},
+  groups         = {COMFORT},
+  priority       = {prio1},
+  publisher      = {Springer Science and Business Media {LLC}},
+  qualityassured = {qualityAssured},
+}
+
+@Misc{2023_Han_Misc,
+  author         = {Han, Tianyu and Adams, Lisa C. and Papaioannou, Jens-Michalis and Grundmann, Paul and Oberhauser, Tom and Löser, Alexander and Truhn, Daniel and Bressem, Keno K.},
+  title          = {MedAlpaca -- An Open-Source Collection of Medical Conversational AI Models and Training Data},
+  year           = {2023},
+  copyright      = {Creative Commons Attribution 4.0 International},
+  doi            = {10.48550/ARXIV.2304.08247},
+  file           = {:2023_Han_Misc.pdf:PDF},
+  groups         = {COMFORT},
+  keywords       = {Computation and Language (cs.CL), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  priority       = {prio1},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2023_Adams_Article,
+  author         = {Lisa C. Adams and Felix Busch and Daniel Truhn and Marcus R. Makowski and Hugo J. W. L. Aerts and Keno K. Bressem},
+  journal        = {Journal of Medical Internet Research},
+  title          = {{W}hat {D}oes {DALL}-{E} 2 {K}now {A}bout {R}adiology?},
+  year           = {2023},
+  month          = {mar},
+  pages          = {e43110},
+  volume         = {25},
+  doi            = {10.2196/43110},
+  file           = {:2023_Adams_Article.pdf:PDF},
+  groups         = {COMFORT},
+  priority       = {prio1},
+  publisher      = {{JMIR} Publications Inc.},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2022_Vinayahalingam_Article,
+  author         = {Shankeeth Vinayahalingam and Niels van Nistelrooij and Bram van Ginneken and Keno Bressem and Daniel Tröltzsch and Max Heiland and Tabea Flügge and Robert Gaudin},
+  journal        = {Scientific Reports},
+  title          = {Detection of mandibular fractures on panoramic radiographs using deep learning},
+  year           = {2022},
+  month          = {nov},
+  number         = {1},
+  volume         = {12},
+  doi            = {10.1038/s41598-022-23445-w},
+  file           = {:2022_Vinayahalingam_Article.pdf:PDF},
+  groups         = {COMFORT},
+  priority       = {prio1},
+  publisher      = {Springer Science and Business Media {LLC}},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2021_Bressem_Article,
+  author         = {Keno K. Bressem and Janis L. Vahldiek and Lisa Adams and Stefan Markus Niehues and Hildrun Haibel and Valeria Rios Rodriguez and Murat Torgutalp and Mikhail Protopopov and Fabian Proft and Judith Rademacher and Joachim Sieper and Martin Rudwaleit and Bernd Hamm and Marcus R. Makowski and Kay-Geert Hermann and Denis Poddubnyy},
+  journal        = {Arthritis Research {\&}amp$\mathsemicolon$ Therapy},
+  title          = {Deep learning for detection of radiographic sacroiliitis: achieving expert-level performance},
+  year           = {2021},
+  month          = {apr},
+  number         = {1},
+  volume         = {23},
+  abstract       = {Background:
+Radiographs of the sacroiliac joints are commonly used for the diagnosis and classification of axial spondyloarthritis. The aim of this study was to develop and validate an artificial neural network for the detection of definite radiographic sacroiliitis as a manifestation of axial spondyloarthritis (axSpA).
+
+Methods:
+Conventional radiographs of the sacroiliac joints obtained in two independent studies of patients with axSpA were used. The first cohort comprised 1553 radiographs and was split into training (n = 1324) and validation (n = 229) sets. The second cohort comprised 458 radiographs and was used as an independent test dataset. All radiographs were assessed in a central reading session, and the final decision on the presence or absence of definite radiographic sacroiliitis was used as a reference. The performance of the neural network was evaluated by calculating areas under the receiver operating characteristic curves (AUCs) as well as sensitivity and specificity. Cohen’s kappa and the absolute agreement were used to assess the agreement between the neural network and the human readers.
+
+Results:
+The neural network achieved an excellent performance in the detection of definite radiographic sacroiliitis with an AUC of 0.97 and 0.94 for the validation and test datasets, respectively. Sensitivity and specificity for the cut-off weighting both measurements equally were 88% and 95% for the validation and 92% and 81% for the test set. The Cohen’s kappa between the neural network and the reference judgements were 0.79 and 0.72 for the validation and test sets with an absolute agreement of 90% and 88%, respectively.
+
+Conclusion:
+Deep artificial neural networks enable the accurate detection of definite radiographic sacroiliitis relevant for the diagnosis and classification of axSpA.},
+  doi            = {10.1186/s13075-021-02484-0},
+  file           = {:2021_Bressem_Article.pdf:PDF},
+  groups         = {COMFORT},
+  priority       = {prio1},
+  publisher      = {Springer Science and Business Media {LLC}},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2021_Grauhan_Article,
+  author         = {Nils F. Grauhan and Stefan M. Niehues and Robert A. Gaudin and Sarah Keller and Janis L. Vahldiek and Lisa C. Adams and Keno K. Bressem},
+  journal        = {Skeletal Radiology},
+  title          = {Deep learning for accurately recognizing common causes of shoulder pain on radiographs},
+  year           = {2021},
+  month          = {feb},
+  number         = {2},
+  pages          = {355--362},
+  volume         = {51},
+  abstract       = {Objective:
+Training a convolutional neural network (CNN) to detect the most common causes of shoulder pain on plain radiographs and to assess its potential value in serving as an assistive device to physicians.
+
+Materials and methods:
+We used a CNN of the ResNet-50 architecture which was trained on 2700 shoulder radiographs from clinical practice of multiple institutions. All radiographs were reviewed and labeled for six findings: proximal humeral fractures, joint dislocation, periarticular calcification, osteoarthritis, osteosynthesis, and joint endoprosthesis. The trained model was then evaluated on a separate test dataset, which was previously annotated by three independent expert radiologists. Both the training and the test datasets included radiographs of highly variable image quality to reflect the clinical situation and to foster robustness of the CNN. Performance of the model was evaluated using receiver operating characteristic (ROC) curves, the thereof derived AUC as well as sensitivity and specificity.
+
+Results:
+The developed CNN demonstrated a high accuracy with an area under the curve (AUC) of 0.871 for detecting fractures, 0.896 for joint dislocation, 0.945 for osteoarthritis, and 0.800 for periarticular calcifications. It also detected osteosynthesis and endoprosthesis with near perfect accuracy (AUC 0.998 and 1.0, respectively). Sensitivity and specificity were 0.75 and 0.86 for fractures, 0.95 and 0.65 for joint dislocation, 0.90 and 0.86 for osteoarthrosis, and 0.60 and 0.89 for calcification.
+
+Conclusion:
+CNNs have the potential to serve as an assistive device by providing clinicians a means to prioritize worklists or providing additional safety in situations of increased workload.},
+  doi            = {10.1007/s00256-021-03740-9},
+  file           = {:2021_Grauhan_Article.pdf:PDF},
+  groups         = {COMFORT},
+  publisher      = {Springer Science and Business Media {LLC}},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2021_Erxleben_Article,
+  author         = {Christoph Erxleben and Lisa C. Adams and Jacob Albrecht and Antonia Petersen and Janis L. Vahldiek and Hans-Martin Thie{\ss} and Julia Kremmin and Marcus R. Makowski and Alexandra Niehues and Stefan M. Niehues and Keno K. Bressem},
+  journal        = {Clinical Imaging},
+  title          = {Improving {CT} accuracy in the diagnosis of {COVID}-19 in a hospital setting},
+  year           = {2021},
+  month          = {aug},
+  pages          = {1--5},
+  volume         = {76},
+  abstract       = {Objective
+This study aimed to improve the accuracy of CT for detection of COVID-19-associated pneumonia and to identify patient subgroups who might benefit most from CT imaging.
+
+Methods
+A total of 269 patients who underwent CT for suspected COVID-19 were included in this retrospective analysis. COVID-19 was confirmed by reverse-transcription-polymerase-chain-reaction. Basic demographics (age and sex) and initial vital parameters (O2-saturation, respiratory rate, and body temperature) were recorded. Generalized mixed models were used to calculate the accuracy of vital parameters for detection of COVID-19 and to evaluate the diagnostic accuracy of CT. A clinical score based on vital parameters, age, and sex was established to estimate the pretest probability of COVID-19 and used to define low, intermediate, and high risk groups. A p-value of <0.05 was considered statistically significant.
+
+Results
+The sole use of vital parameters for the prediction of COVID-19 was inferior to CT. After correction for confounders, such as age and sex, CT showed a sensitivity of 0.86, specificity of 0.78, and positive predictive value of 0.36. In the subgroup analysis based on pretest probability, positive predictive value and sensitivity increased to 0.53 and 0.89 in the high-risk group, while specificity was reduced to 0.68. In the low-risk group, sensitivity and positive predictive value decreased to 0.76 and 0.33 with a specificity of 0.83. The negative predictive value remained high (0.94 and 0.97) in both groups.
+
+Conclusions
+The accuracy of CT for the detection of COVID-19 might be increased by selecting patients with a high-pretest probability of COVID-19.},
+  doi            = {10.1016/j.clinimag.2021.01.026},
+  file           = {:2021_Erxleben_Article.pdf:PDF},
+  groups         = {COMFORT},
+  publisher      = {Elsevier {BV}},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2020_Bressem_ArticleH,
+  author         = {Keno K. Bressem and Lisa C. Adams and Robert A. Gaudin and Daniel Tröltzsch and Bernd Hamm and Marcus R. Makowski and Chan-Yong Schüle and Janis L. Vahldiek and Stefan M. Niehues},
+  journal        = {Bioinformatics},
+  title          = {Highly accurate classification of chest radiographic reports using a deep learning natural language model pre-trained on 3.8 million text reports},
+  year           = {2020},
+  month          = {jul},
+  number         = {21},
+  pages          = {5255--5261},
+  volume         = {36},
+  abstract       = {Motivation
+The development of deep, bidirectional transformers such as Bidirectional Encoder Representations from Transformers (BERT) led to an outperformance of several Natural Language Processing (NLP) benchmarks. Especially in radiology, large amounts of free-text data are generated in daily clinical workflow. These report texts could be of particular use for the generation of labels in machine learning, especially for image classification. However, as report texts are mostly unstructured, advanced NLP methods are needed to enable accurate text classification. While neural networks can be used for this purpose, they must first be trained on large amounts of manually labelled data to achieve good results. In contrast, BERT models can be pre-trained on unlabelled data and then only require fine tuning on a small amount of manually labelled data to achieve even better results.
+
+Results
+Using BERT to identify the most important findings in intensive care chest radiograph reports, we achieve areas under the receiver operation characteristics curve of 0.98 for congestion, 0.97 for effusion, 0.97 for consolidation and 0.99 for pneumothorax, surpassing the accuracy of previous approaches with comparatively little annotation effort. Our approach could therefore help to improve information extraction from free-text medical reports.
+
+Availability  and implementation
+We make the source code for fine-tuning the BERT-models freely available at https://github.com/fast-raidiology/bert-for-radiology.},
+  doi            = {10.1093/bioinformatics/btaa668},
+  editor         = {Jonathan Wren},
+  file           = {:2020_Bressem_ArticleH.pdf:PDF},
+  groups         = {COMFORT},
+  publisher      = {Oxford University Press ({OUP})},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2020_Bressem_ArticleC,
+  author         = {Keno K. Bressem and Lisa C. Adams and Christoph Erxleben and Bernd Hamm and Stefan M. Niehues and Janis L. Vahldiek},
+  journal        = {Scientific Reports},
+  title          = {Comparing different deep learning architectures for classification of chest radiographs},
+  year           = {2020},
+  month          = {aug},
+  number         = {1},
+  volume         = {10},
+  abstract       = {Chest radiographs are among the most frequently acquired images in radiology and are often the subject of computer vision research. However, most of the models used to classify chest radiographs are derived from openly available deep neural networks, trained on large image datasets. These datasets differ from chest radiographs in that they are mostly color images and have substantially more labels. Therefore, very deep convolutional neural networks (CNN) designed for ImageNet and often representing more complex relationships, might not be required for the comparably simpler task of classifying medical image data. Sixteen different architectures of CNN were compared regarding the classification performance on two openly available datasets, the CheXpert and COVID-19 Image Data Collection. Areas under the receiver operating characteristics curves (AUROC) between 0.83 and 0.89 could be achieved on the CheXpert dataset. On the COVID-19 Image Data Collection, all models showed an excellent ability to detect COVID-19 and non-COVID pneumonia with AUROC values between 0.983 and 0.998. It could be observed, that more shallow networks may achieve results comparable to their deeper and more complex counterparts with shorter training times, enabling classification performances on medical image data close to the state-of-the-art methods even when using limited hardware.},
+  doi            = {10.1038/s41598-020-70479-z},
+  file           = {:2020_Bressem_ArticleC.pdf:PDF},
+  groups         = {COMFORT},
+  publisher      = {Springer Science and Business Media {LLC}},
+  qualityassured = {qualityAssured},
+}
+
+@Misc{2016_Jegou_Misc,
+  author         = {Jégou, Simon and Drozdzal, Michal and Vazquez, David and Romero, Adriana and Bengio, Yoshua},
+  title          = {{T}he {O}ne {H}undred {L}ayers {T}iramisu: Fully {C}onvolutional {D}ense{N}ets for {S}emantic {S}egmentation},
+  year           = {2016},
+  abstract       = {State-of-the-art approaches for semantic image segmentation are built on Convolutional Neural Networks (CNNs). The typical segmentation architecture is composed of (a) a downsampling path responsible for extracting coarse semantic features, followed by (b) an upsampling path trained to recover the input image resolution at the output of the model and, optionally, (c) a post-processing module (e.g. Conditional Random Fields) to refine the model predictions.
+Recently, a new CNN architecture, Densely Connected Convolutional Networks (DenseNets), has shown excellent results on image classification tasks. The idea of DenseNets is based on the observation that if each layer is directly connected to every other layer in a feed-forward fashion then the network will be more accurate and easier to train.
+In this paper, we extend DenseNets to deal with the problem of semantic segmentation. We achieve state-of-the-art results on urban scene benchmark datasets such as CamVid and Gatech, without any further post-processing module nor pretraining. Moreover, due to smart construction of the model, our approach has much less parameters than currently published best entries for these datasets.},
+  copyright      = {arXiv.org perpetual, non-exclusive license},
+  doi            = {10.48550/ARXIV.1611.09326},
+  file           = {:2016_Jegou_Misc.pdf:PDF},
+  groups         = {COMFORT},
+  keywords       = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  priority       = {prio1},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@Misc{2020_Tancik_Misc,
+  author         = {Tancik, Matthew and Srinivasan, Pratul P. and Mildenhall, Ben and Fridovich-Keil, Sara and Raghavan, Nithin and Singhal, Utkarsh and Ramamoorthi, Ravi and Barron, Jonathan T. and Ng, Ren},
+  title          = {{F}ourier {F}eatures {L}et {N}etworks {L}earn {H}igh {F}requency {F}unctions in {L}ow {D}imensional {D}omains},
+  year           = {2020},
+  abstract       = {We show that passing input points through a simple Fourier feature mapping enables a multilayer perceptron (MLP) to learn high-frequency functions in low-dimensional problem domains. These results shed light on recent advances in computer vision and graphics that achieve state-of-the-art results by using MLPs to represent complex 3D objects and scenes. Using tools from the neural tangent kernel (NTK) literature, we show that a standard MLP fails to learn high frequencies both in theory and in practice. To overcome this spectral bias, we use a Fourier feature mapping to transform the effective NTK into a stationary kernel with a tunable bandwidth. We suggest an approach for selecting problem-specific Fourier features that greatly improves the performance of MLPs for low-dimensional regression tasks relevant to the computer vision and graphics communities.},
+  copyright      = {arXiv.org perpetual, non-exclusive license},
+  doi            = {10.48550/ARXIV.2006.10739},
+  file           = {:2020_Tancik_Misc.pdf:PDF},
+  groups         = {MachineLearning},
+  keywords       = {Computer Vision and Pattern Recognition (cs.CV), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  priority       = {prio1},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@InProceedings{2009_Radovanovic_InProceedings,
+  author         = {Milo{\v{s}} Radovanovi{\'{c}} and Alexandros Nanopoulos and Mirjana Ivanovi{\'{c}}},
+  booktitle      = {Proceedings of the 26th Annual International Conference on Machine Learning},
+  title          = {Nearest neighbors in high-dimensional data},
+  year           = {2009},
+  month          = {jun},
+  publisher      = {{ACM}},
+  abstract       = {High dimensionality can pose severe difficulties, widely recognized as different aspects of the curse of dimensionality. In this paper we study a new aspect of the curse pertaining to the distribution of k-occurrences, i.e., the number of times a point appears among the k nearest neighbors of other points in a data set. We show that, as dimensionality increases, this distribution becomes considerably skewed and hub points emerge (points with very high k-occurrences). We examine the origin of this phenomenon, showing that it is an inherent property of high-dimensional vector space, and explore its influence on applications based on measuring distances in vector spaces, notably classification, clustering, and information retrieval.},
+  doi            = {10.1145/1553374.1553485},
+  file           = {:2009_Radovanovic_InProceedings.pdf:PDF},
+  groups         = {ClusteringAlgorithms},
+  qualityassured = {qualityAssured},
+  readstatus     = {skimmed},
+}
+
+@Article{2023_Haehnel_Article,
+  author         = {Tom Haehnel and Tamara Raschka and Stefano Sapienza and Jochen Klucken and Enrico Glaab and Jean-Christophe Corvol and Bjoern Falkenburger and Holger Froehlich},
+  title          = {{P}rogression {S}ubtypes in {P}arkinson{\textquotesingle}s {D}isease: {A} {D}ata-driven {M}ulti-{C}ohort {A}nalysis},
+  year           = {2023},
+  month          = {oct},
+  abstract       = {Background: The progression of Parkinson's disease (PD) is heterogeneous across patients. This heterogeneity complicates patients counseling and inflates the number of patients needed to test potential neuroprotective treatments. Moreover, disease subtypes might require different therapies. This work uses a data-driven approach to investigate how observed heterogeneity in PD can be explained by the existence of distinct PD progression subtypes. Methods: To derive stable PD progression subtypes in an unbiased manner, we analyzed multimodal longitudinal data from three large PD cohorts. A latent time joint mixed-effects model (LTJMM) was used to align patients on a common disease timescale. Progression subtypes were identified by variational deep embedding with recurrence (VaDER). These subtypes were then characterized across the three cohorts using clinical scores, DaTSCAN imaging and digital gait biomarkers. To assign patients to progression subtypes from baseline data, we developed predictive models and performed extensive cross-cohort validation. Results: In each cohort, we identified a fast-progressing and a slow-progressing subtype. These subtypes were reflected by different patterns of motor and non-motor symptoms progression, survival rates, treatment response and features extracted from DaTSCAN imaging and digital gait assessments. Predictive models achieved robust performance with ROC-AUC up to 0.79 for subtype identification. Simulations demonstrated that enriching clinical trials with fast-progressing patients based on predictions from baseline can reduce the required cohort size by 43%. Conclusion: Our results show that heterogeneity in PD can be explained by two distinct subtypes of PD progression that are stable across cohorts and can be predicted from baseline data. These subtypes align with the brain-first vs. body-first concept, which potentially provides a biological explanation for subtype differences. The predictive models will enable clinical trials with significantly lower sample sizes by enriching fast-progressing patients.},
+  doi            = {10.1101/2023.10.12.23296943},
+  file           = {:2023_Haehnel_Article.pdf:PDF},
+  priority       = {prio2},
+  publisher      = {Cold Spring Harbor Laboratory},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2017_Qiu_Article,
+  author         = {Jianfeng Qiu and H. Harold Li and Tiezhi Zhang and Fangfang Ma and Deshan Yang},
+  journal        = {Journal of Applied Clinical Medical Physics},
+  title          = {Automatic x-ray image contrast enhancement based on parameter auto-optimization},
+  year           = {2017},
+  month          = {sep},
+  number         = {6},
+  pages          = {218--223},
+  volume         = {18},
+  abstract       = {Purpose
+Insufficient image contrast associated with radiation therapy daily setup x-ray images could negatively affect accurate patient treatment setup. We developed a method to perform automatic and user-independent contrast enhancement on 2D kilo voltage (kV) and megavoltage (MV) x-ray images. The goal was to provide tissue contrast optimized for each treatment site in order to support accurate patient daily treatment setup and the subsequent offline review.
+
+Methods
+The proposed method processes the 2D x-ray images with an optimized image processing filter chain, which consists of a noise reduction filter and a high-pass filter followed by a contrast limited adaptive histogram equalization (CLAHE) filter. The most important innovation is to optimize the image processing parameters automatically to determine the required image contrast settings per disease site and imaging modality. Three major parameters controlling the image processing chain, i.e., the Gaussian smoothing weighting factor for the high-pass filter, the block size, and the clip limiting parameter for the CLAHE filter, were determined automatically using an interior-point constrained optimization algorithm.
+
+Results
+Fifty-two kV and MV x-ray images were included in this study. The results were manually evaluated and ranked with scores from 1 (worst, unacceptable) to 5 (significantly better than adequate and visually praise worthy) by physicians and physicists. The average scores for the images processed by the proposed method, the CLAHE, and the best window-level adjustment were 3.92, 2.83, and 2.27, respectively. The percentage of the processed images received a score of 5 were 48, 29, and 18%, respectively.
+
+Conclusion
+The proposed method is able to outperform the standard image contrast adjustment procedures that are currently used in the commercial clinical systems. When the proposed method is implemented in the clinical systems as an automatic image processing filter, it could be useful for allowing quicker and potentially more accurate treatment setup and facilitating the subsequent offline review and verification.},
+  doi            = {10.1002/acm2.12172},
+  file           = {:2017_Qiu_Article.pdf:PDF},
+  groups         = {Medical},
+  publisher      = {Wiley},
+  qualityassured = {qualityAssured},
+  readstatus     = {read},
+}
+
+@InProceedings{2016_He_InProceedings,
+  author          = {Kaiming He and Xiangyu Zhang and Shaoqing Ren and Jian Sun},
+  booktitle       = {2016 {IEEE} Conference on Computer Vision and Pattern Recognition ({CVPR})},
+  title           = {{D}eep {R}esidual {L}earning for {I}mage {R}ecognition},
+  year            = {2016},
+  month           = {jun},
+  publisher       = {{IEEE}},
+  abstract        = {Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers - 8× deeper than VGG nets [40] but still having lower complexity. An ensemble of these residual nets achieves 3.57% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central importance for many visual recognition tasks. Solely due to our extremely deep representations, we obtain a 28% relative improvement on the COCO object detection dataset. Deep residual nets are foundations of our submissions to ILSVRC & COCO 2015 competitions1, where we also won the 1st places on the tasks of ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.},
+  comment-fabrice = {The ResNet paper},
+  doi             = {10.1109/cvpr.2016.90},
+  file            = {:2016_He_InProceedings.pdf:PDF},
+  groups          = {ConvolutionNetworks},
+  priority        = {prio1},
+  qualityassured  = {qualityAssured},
+}
+
+@Misc{2023_Arkoudas_Misc,
+  author         = {Arkoudas, Konstantine},
+  title          = {{GPT}-4 {C}an't {R}eason},
+  year           = {2023},
+  abstract       = {GPT-4 was released in March 2023 to wide acclaim, marking a very substantial improvement across the board over GPT-3.5 (OpenAI's previously best model, which had powered the initial release of ChatGPT). However, despite the genuinely impressive improvement, there are good reasons to be highly skeptical of GPT-4's ability to reason. This position paper discusses the nature of reasoning; criticizes the current formulation of reasoning problems in the NLP community, as well as the way in which LLM reasoning performance is currently evaluated; introduces a small collection of 21 diverse reasoning problems; and performs a detailed qualitative evaluation of GPT-4's performance on those problems. Based on this analysis, the paper concludes that, despite its occasional flashes of analytical brilliance, GPT-4 at present is utterly incapable of reasoning.},
+  copyright      = {Creative Commons Attribution 4.0 International},
+  doi            = {10.48550/ARXIV.2308.03762},
+  keywords       = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  priority       = {prio1},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@Misc{2018_Howard_Misc,
+  author         = {Howard, Jeremy and Ruder, Sebastian},
+  title          = {{U}niversal {L}anguage {M}odel {F}ine-tuning for {T}ext {C}lassification},
+  year           = {2018},
+  abstract       = {Inductive transfer learning has greatly impacted computer vision, but existing approaches in NLP still require task-specific modifications and training from scratch. We propose Universal Language Model Fine-tuning (ULMFiT), an effective transfer learning method that can be applied to any task in NLP, and introduce techniques that are key for fine-tuning a language model. Our method significantly outperforms the state-of-the-art on six text classification tasks, reducing the error by 18-24% on the majority of datasets. Furthermore, with only 100 labeled examples, it matches the performance of training from scratch on 100x more data. We open-source our pretrained models and code.},
+  copyright      = {arXiv.org perpetual, non-exclusive license},
+  doi            = {10.48550/ARXIV.1801.06146},
+  keywords       = {Computation and Language (cs.CL), Machine Learning (cs.LG), Machine Learning (stat.ML), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  priority       = {prio1},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@Misc{2023_Deusser_Misc,
+  author         = {Deußer, Tobias and Zhao, Cong and Krämer, Wolfgang and Leonhard, David and Bauckhage, Christian and Sifa, Rafet},
+  title          = {{C}ontrolled {R}andomness {I}mproves the {P}erformance of {T}ransformer {M}odels},
+  year           = {2023},
+  copyright      = {arXiv.org perpetual, non-exclusive license},
+  doi            = {10.48550/ARXIV.2310.13526},
+  file           = {:2023_Deusser_Misc.pdf:PDF},
+  groups         = {MachineLearning, Language Processing},
+  keywords       = {Computation and Language (cs.CL), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@Misc{2023_Hao_Misc,
+  author         = {Hao, Zengguang and Zhang, Jie and Xu, Binxia and Wang, Yafang and de Melo, Gerard and Li, Xiaolong},
+  title          = {{I}ntent{D}ial: {A}n {I}ntent {G}raph based {M}ulti-{T}urn {D}ialogue {S}ystem with {R}easoning {P}ath {V}isualization},
+  year           = {2023},
+  abstract       = {Intent detection and identification from multi-turn dialogue has become a widely explored technique in conversational agents, for example, voice assistants and intelligent customer services. The conventional approaches typically cast the intent mining process as a classification task. Although neural classifiers have proven adept at such classification tasks, the issue of neural network models often impedes their practical deployment in real-world settings. We present a novel graph-based multi-turn dialogue system called , which identifies a user's intent by identifying intent elements and a standard query from a dynamically constructed and extensible intent graph using reinforcement learning. In addition, we provide visualization components to monitor the immediate reasoning path for each turn of a dialogue, which greatly facilitates further improvement of the system.},
+  copyright      = {arXiv.org perpetual, non-exclusive license},
+  doi            = {10.48550/ARXIV.2310.11818},
+  file           = {:2023_Hao_Misc.pdf:PDF},
+  keywords       = {Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@Misc{2017_Leike_Misc,
+  author         = {Leike, Jan and Martic, Miljan and Krakovna, Victoria and Ortega, Pedro A. and Everitt, Tom and Lefrancq, Andrew and Orseau, Laurent and Legg, Shane},
+  title          = {{AI} {S}afety {G}ridworlds},
+  year           = {2017},
+  copyright      = {arXiv.org perpetual, non-exclusive license},
+  doi            = {10.48550/ARXIV.1711.09883},
+  file           = {:2017_Leike_Misc.pdf:PDF},
+  groups         = {ReinforcementLearning, Alex Roucka},
+  keywords       = {Machine Learning (cs.LG), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+  readstatus     = {read},
+}
+
+@Misc{2022_Alayrac_Misc,
+  author         = {Alayrac, Jean-Baptiste and Donahue, Jeff and Luc, Pauline and Miech, Antoine and Barr, Iain and Hasson, Yana and Lenc, Karel and Mensch, Arthur and Millican, Katie and Reynolds, Malcolm and Ring, Roman and Rutherford, Eliza and Cabi, Serkan and Han, Tengda and Gong, Zhitao and Samangooei, Sina and Monteiro, Marianne and Menick, Jacob and Borgeaud, Sebastian and Brock, Andrew and Nematzadeh, Aida and Sharifzadeh, Sahand and Binkowski, Mikolaj and Barreira, Ricardo and Vinyals, Oriol and Zisserman, Andrew and Simonyan, Karen},
+  title          = {{F}lamingo: a {V}isual {L}anguage {M}odel for {F}ew-{S}hot {L}earning},
+  year           = {2022},
+  abstract       = {Building models that can be rapidly adapted to novel tasks using only a handful of annotated examples is an open challenge for multimodal machine learning research. We introduce Flamingo, a family of Visual Language Models (VLM) with this ability. We propose key architectural innovations to: (i) bridge powerful pretrained vision-only and language-only models, (ii) handle sequences of arbitrarily interleaved visual and textual data, and (iii) seamlessly ingest images or videos as inputs. Thanks to their flexibility, Flamingo models can be trained on large-scale multimodal web corpora containing arbitrarily interleaved text and images, which is key to endow them with in-context few-shot learning capabilities. We perform a thorough evaluation of our models, exploring and measuring their ability to rapidly adapt to a variety of image and video tasks. These include open-ended tasks such as visual question-answering, where the model is prompted with a question which it has to answer; captioning tasks, which evaluate the ability to describe a scene or an event; and close-ended tasks such as multiple-choice visual question-answering. For tasks lying anywhere on this spectrum, a single Flamingo model can achieve a new state of the art with few-shot learning, simply by prompting the model with task-specific examples. On numerous benchmarks, Flamingo outperforms models fine-tuned on thousands of times more task-specific data.},
+  copyright      = {arXiv.org perpetual, non-exclusive license},
+  doi            = {10.48550/ARXIV.2204.14198},
+  file           = {:2022_Alayrac_Misc.pdf:PDF},
+  groups         = {Language Processing, MachineLearning, COMFORT},
+  keywords       = {Computer Vision and Pattern Recognition (cs.CV), Artificial Intelligence (cs.AI), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  priority       = {prio1},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
-
-@Comment{jabref-meta: fileDirectory:/home/fabrice/Documents/library/papers;}
 
 @Comment{jabref-meta: grouping:
 0 AllEntriesGroup:;
@@ -1830,17 +2624,22 @@ Improvements over this approaches in "Penalizing side effects using stepwise rel
 2 StaticGroup:ClusteringAlgorithms\;0\;1\;0xe64d4dff\;UNGROUP\;\;;
 2 StaticGroup:ConvolutionNetworks\;0\;1\;0xff9966ff\;LAYERS_TRIPLE_OUTLINE\;\;;
 2 StaticGroup:GraphKernels\;0\;1\;0x4d804dff\;GRAPH_OUTLINE\;\;;
+2 StaticGroup:Language Processing\;0\;1\;0xff00ffff\;ALPHABETICAL_VARIANT\;NLP, LLM and other\;;
 2 StaticGroup:ReinforcementLearning\;0\;1\;0x808000ff\;ROBOT\;\;;
+2 StaticGroup:SelfSupervisedLearning\;0\;1\;0x996699ff\;TEACH\;\;;
 2 StaticGroup:SupportVectorMachines\;0\;0\;0xe6b34dff\;AB_TESTING\;\;;
+1 StaticGroup:Medical\;0\;1\;0x000000ff\;MEDICAL_BAG\;\;;
 1 StaticGroup:Projects\;0\;1\;0xffffffff\;ACCOUNT_GROUP\;Subgroups based on Projects\;;
 2 StaticGroup:Alex Roucka\;0\;1\;0xffffffff\;\;His Bachelor Thesis based on AI Gridworlds, Reinforcement Learning, Q Learning, Relative Reachability and Attainable Utitlity Preservation\;;
 2 StaticGroup:MasterThesis_ComputerScience\;0\;1\;0xffffffff\;BOOK_EDUCATION\;Most relevant papers\;;
+2 StaticGroup:Special_Researchers\;0\;1\;0x8a8a8aff\;\;\;;
+3 StaticGroup:HPI\;0\;1\;0x8a8a8aff\;\;\;;
+3 StaticGroup:COMFORT\;0\;1\;0xffffffff\;MDI_ADJUST\;\;;
+3 StaticGroup:Charité_other\;0\;1\;0xffffffff\;MDI_CALENDAR_PLUS\;\;;
+3 StaticGroup:LexFridman\;0\;1\;0x8a8a8aff\;\;\;;
+3 StaticGroup:MaxPlanck\;0\;1\;0x8a8a8aff\;\;\;;
+3 StaticGroup:Neuroscience&ML\;0\;1\;0x8a8a8aff\;\;\;;
+3 StaticGroup:TU-Berlin-Wäldchen\;0\;1\;0x8a8a8aff\;\;\;;
+3 StaticGroup:YanLeCun\;0\;1\;0x8a8a8aff\;\;\;;
 2 StaticGroup:Weisfeiler-Lehman-Related\;0\;1\;0xffffffff\;UNGROUP\;\;;
 }
-
-@Comment{jabref-meta: saveActions:disabled;
-all-text-fields[identity]
-date[normalize_date]
-month[normalize_month]
-pages[normalize_page_numbers]
-;}
