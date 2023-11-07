@@ -2607,9 +2607,53 @@ The proposed method is able to outperform the standard image contrast adjustment
   copyright      = {arXiv.org perpetual, non-exclusive license},
   doi            = {10.48550/ARXIV.2204.14198},
   file           = {:2022_Alayrac_Misc.pdf:PDF},
-  groups         = {Language Processing, MachineLearning, COMFORT},
+  groups         = {Language Processing, MachineLearning, COMFORT, Deep Mind},
   keywords       = {Computer Vision and Pattern Recognition (cs.CV), Artificial Intelligence (cs.AI), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+  readstatus     = {read},
+}
+
+@Misc{2018_Devlin_Misc,
+  author         = {Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  title          = {{BERT}: {P}re-training of {D}eep {B}idirectional {T}ransformers for {L}anguage {U}nderstanding},
+  year           = {2018},
+  abstract       = {We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications.
+BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5% (7.7% point absolute improvement), MultiNLI accuracy to 86.7% (4.6% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).},
+  copyright      = {arXiv.org perpetual, non-exclusive license},
+  doi            = {10.48550/ARXIV.1810.04805},
+  file           = {:2018_Devlin_Misc.pdf:PDF},
+  groups         = {COMFORT, Language Processing},
+  keywords       = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
   priority       = {prio1},
+  publisher      = {arXiv},
+  qualityassured = {qualityAssured},
+}
+
+@Article{2024_Bressem_Article,
+  author    = {Keno K. Bressem and Jens-Michalis Papaioannou and Paul Grundmann and Florian Borchert and Lisa C. Adams and Leonhard Liu and Felix Busch and Lina Xu and Jan P. Loyen and Stefan M. Niehues and Moritz Augustin and Lennart Grosser and Marcus R. Makowski and Hugo J. W .L. Aerts and Alexander Löser},
+  journal   = {Expert Systems with Applications},
+  title     = {{medBERT}.de: {A} comprehensive {G}erman {BERT} model for the medical domain},
+  year      = {2024},
+  month     = {mar},
+  pages     = {121598},
+  volume    = {237},
+  doi       = {10.1016/j.eswa.2023.121598},
+  publisher = {Elsevier {BV}},
+}
+
+@Misc{2022_Hoffmann_Misc,
+  author         = {Hoffmann, Jordan and Borgeaud, Sebastian and Mensch, Arthur and Buchatskaya, Elena and Cai, Trevor and Rutherford, Eliza and Casas, Diego de Las and Hendricks, Lisa Anne and Welbl, Johannes and Clark, Aidan and Hennigan, Tom and Noland, Eric and Millican, Katie and Driessche, George van den and Damoc, Bogdan and Guy, Aurelia and Osindero, Simon and Simonyan, Karen and Elsen, Erich and Rae, Jack W. and Vinyals, Oriol and Sifre, Laurent},
+  title          = {{T}raining {C}ompute-{O}ptimal {L}arge {L}anguage {M}odels},
+  year           = {2022},
+  abstract       = {We investigate the optimal model size and number of tokens for training a transformer language model under a given compute budget. We find that current large language models are significantly undertrained, a consequence of the recent focus on scaling language models whilst keeping the amount of training data constant. By training over 400 language models ranging from 70 million to over 16 billion parameters on 5 to 500 billion tokens, we find that for compute-optimal training, the model size and the number of training tokens should be scaled equally: for every doubling of model size the number of training tokens should also be doubled. We test this hypothesis by training a predicted compute-optimal model, Chinchilla, that uses the same compute budget as Gopher but with 70B parameters and 4× more more data. Chinchilla uniformly and significantly outperforms Gopher (280B), GPT-3 (175B), Jurassic-1 (178B), and Megatron-Turing NLG (530B) on a large range of downstream evaluation tasks. This also means that Chinchilla uses substantially less compute for fine-tuning and inference, greatly facilitating downstream usage. As a highlight, Chinchilla reaches a state-of-the-art average accuracy of 67.5% on the MMLU benchmark, greater than a 7% improvement over Gopher.},
+  comment        = {70B Chinchilla language model},
+  copyright      = {arXiv.org perpetual, non-exclusive license},
+  doi            = {10.48550/ARXIV.2203.15556},
+  file           = {:2022_Hoffmann_Misc.pdf:PDF},
+  groups         = {Language Processing, MachineLearning},
+  keywords       = {Computation and Language (cs.CL), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  priority       = {prio2},
   publisher      = {arXiv},
   qualityassured = {qualityAssured},
 }
@@ -2641,5 +2685,6 @@ The proposed method is able to outperform the standard image contrast adjustment
 3 StaticGroup:Neuroscience&ML\;0\;1\;0x8a8a8aff\;\;\;;
 3 StaticGroup:TU-Berlin-Wäldchen\;0\;1\;0x8a8a8aff\;\;\;;
 3 StaticGroup:YanLeCun\;0\;1\;0x8a8a8aff\;\;\;;
+3 StaticGroup:Deep Mind\;0\;1\;0x8a8a8aff\;\;\;;
 2 StaticGroup:Weisfeiler-Lehman-Related\;0\;1\;0xffffffff\;UNGROUP\;\;;
 }
